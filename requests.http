@@ -1,0 +1,27 @@
+### 1. Dang ky
+POST http://localhost:8005/auth/signup
+Content-Type: application/json
+
+{
+  "fullName": "Nguyen Van A",
+  "email": "student@example.com",
+  "password": "123456",
+  "images": null
+}
+
+### 2. Dang nhap - copy token trong response
+POST http://localhost:8005/auth/login
+Content-Type: application/json
+
+{
+  "email": "student@example.com",
+  "password": "123456"
+}
+
+### 3. Ho so - thay YOUR_TOKEN
+GET http://localhost:8005/users/me
+Authorization: Bearer YOUR_TOKEN
+
+### 4. Danh sach nguoi dung - thay YOUR_TOKEN
+GET http://localhost:8005/users
+Authorization: Bearer YOUR_TOKEN

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JWT Nimbus - Dang nhap</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main class="auth-shell">
+    <section class="hero">
+        <p class="eyebrow">SPRING SECURITY 6</p>
+        <h1>JWT voi Nimbus JOSE + JWT</h1>
+        <p>Demo dang ky, dang nhap, ky token HS256 va xac thuc API stateless.</p>
+        <div class="token-flow" aria-label="Luong JWT">
+            <span>Dang nhap</span><b>→</b><span>Nimbus ky JWT</span><b>→</b><span>Bearer token</span>
+        </div>
+    </section>
+
+    <section class="forms">
+        <form id="login-form" class="card">
+            <div>
+                <p class="eyebrow">DA CO TAI KHOAN</p>
+                <h2>Dang nhap</h2>
+            </div>
+            <label>Email
+                <input id="login-email" type="email" autocomplete="email" required placeholder="ban@example.com">
+            </label>
+            <label>Mat khau
+                <input id="login-password" type="password" autocomplete="current-password" required minlength="6">
+            </label>
+            <button type="submit">Dang nhap</button>
+            <p id="login-message" class="message" role="status"></p>
+        </form>
+
+        <form id="signup-form" class="card secondary">
+            <div>
+                <p class="eyebrow">LAN DAU SU DUNG</p>
+                <h2>Tao tai khoan</h2>
+            </div>
+            <label>Ho va ten
+                <input id="signup-name" type="text" autocomplete="name" required maxlength="100">
+            </label>
+            <label>Email
+                <input id="signup-email" type="email" autocomplete="email" required>
+            </label>
+            <label>Mat khau
+                <input id="signup-password" type="password" autocomplete="new-password" required minlength="6" maxlength="72">
+            </label>
+            <button type="submit" class="outline">Dang ky</button>
+            <p id="signup-message" class="message" role="status"></p>
+        </form>
+    </section>
+</main>
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>
